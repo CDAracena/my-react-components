@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.tweet-container {
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 1px 1px 1px 2px lightgrey;
+  height: 150px;
+  margin: auto;
+  display: flex;
+  border-radius: 3px;
+  background-color: whitesmoke;
+}
+
+.user-avatar-img {
+  max-width: 100%;
+  height: 60%;
+  border: 1px solid grey;
+  box-shadow: 1px 1px 1px lightgrey;
+}
+
+.image-div {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.second-half-container {
+  display: flex;
+  width: 75%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.user-handle-div {
+  display: flex;
+  height: 20%;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.btn-section {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.reply-btn {
+  transition: all 0.4s ease-in;
+}
+
+.reply-btn:hover {
+  color: lightblue;
+}
+
+.retweet-btn {
+  transition: all 0.4s ease-in;
+}
+
+.retweet-btn:hover {
+  color: lightgreen;
+}
+
+.like-btn {
+  transition: all 0.4s ease-in;
+}
+
+.like-btn:hover {
+  color: darkred;
+}
+
+.more-options-btn {
+  transition: all 0.4s ease-in;
+}
+
+.more-options-btn:hover {
+  color: darkgrey;
+}
