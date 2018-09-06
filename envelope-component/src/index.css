@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+.envelope-main-container {
+  margin: auto;
+  width: 500px;
+  border: 1px solid lightgrey;
+  height: 200px;
+  box-shadow: 1px 1px 1px 1px lightgrey;
+}
+
+.address-label {
+  width: 25%;
+  padding: 15px;
+}
+
+.fromPerson {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stamp {
+  padding: 15px;
+  border: 1px solid darkgrey;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  color: darkgrey;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.toPerson .address-label {
+  margin: auto;
+}
+
+.stamp-text {
+  transform: skewY(-20deg)
+}
