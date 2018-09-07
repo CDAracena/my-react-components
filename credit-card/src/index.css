@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.card-container {
+  margin: auto;
+  width: 240px;
+  border-radius: 5px;
+  margin-top: 5%;
+  border: 1px solid #106bb194;
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(73, 155, 234, 1) 0%, rgba(30, 150, 246, 1) 59%, rgba(0, 146, 255, 1) 100%);
+  color: ghostwhite;
+  box-shadow: 1px 1px 5px 1px #0a7ad1;
+}
+
+.bank-name {
+  font-weight: bold;
+  text-align: right;
+  font-size: 1.3rem;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.importantInfo {}
+
+.card-num {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'monospace', sans-serif;
+}
+
+.small-text {
+  padding-left: 5%;
+  font-size: 0.7em;
+  font-family: 'monospace', sans-serif;
+}
+
+.expiration-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  font-family: 'monospace', sans-serif;
+}
+
+.valid-thru {
+  font-size: 0.5em;
+  display: inline-block;
+  width: 29px;
+}
+
+.full-name {
+  font-family: 'monospace', sans-serif;
+  padding-left: 5%;
+}
+
+.icon-holder {
+  padding-left: 5%;
+}
