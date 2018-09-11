@@ -1,80 +1,61 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Avatar from './Avatar';
+import Time from './Time';
+import NameHandle from './NameHandle';
+import Message from './Message';
+import ReplyBtn from './ReplyBtn';
+import RetweetBtn from './RetweetBtn';
+import LikeBtn from './LikeBtn'
+import MoreOptionsBtn from './MoreOptionsBtn'
 import 'font-awesome/css/font-awesome.min.css';
 import './index.css';
 
-function Avatar() {
-  return (<div className="image-div"><img src="http://www.newsshare.in/wp-content/uploads/2017/04/Miniclip-8-Ball-Pool-Avatar-11.png" alt="avatar-user" className="user-avatar-img"/></div>)
-}
-
-const Time = () => {
-  let week = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-  ]
-  let date = new Date();
-  return (<span>
-    {week[date.getDay()]}
-  </span>)
-}
-const NameHandle = (props) => {
-  return (<div className="user-handle-div">
-    <h4 className="user-handle">{props.userHandle}</h4>
-    *
-    <div className="time-div">
-      <Time/>
-    </div>
-  </div>)
-}
-
-function Message(props) {
-  return (<div className="message-div">
-    <p>{props.messageText}</p>
-  </div>)
-}
-
-const ReplyBtn = () => {
-  return (<span className="reply-btn">
-    <i className="fa fa-reply"></i>
-  </span>)
-}
-const RetweetBtn = () => {
-  return (<span className="retweet-btn">
-    <i className="fa fa-retweet"></i>
-  </span>)
-}
-const LikeBtn = () => {
-  return (<span className="like-btn">
-    <i className="fa fa-heart"></i>
-  </span>)
-}
-
-const MoreOptionsBtn = () => {
+const Tweet = ({tweets})=> {
   return (
-  <span className="more-options-btn"><i className="fa fa-ellipsis-h"></i> </span>
-  )
-}
-class Tweet extends React.Component {
-  render() {
-    return (<div className="tweet-container">
-      <Avatar/>
-      <div className="second-half-container">
-        <NameHandle userHandle="TainoAldo174"/>
-        <Message messageText="Visiting Greece At The Moment"/>
-        <div className="btn-section"><ReplyBtn/>
-          <RetweetBtn/>
-          <LikeBtn/>
-          <MoreOptionsBtn/>
+    <div>
+  {tweets.map(tweet => <div className="tweet-container" key={tweet.id}>
+        <Avatar img={tweet.img_src}/>
+        <div className="second-half-container">
+          <NameHandle userHandle={tweet.userHandle}/>
+          <Message messageText={tweet.message}/>
+          <div className="btn-section">
+            <ReplyBtn replies={tweet.replyNum}/>
+            <RetweetBtn retweets={tweet.retweets}/>
+            <LikeBtn likes={tweet.Likes}/>
+            <MoreOptionsBtn/>
+          </div>
         </div>
       </div>
-    </div>)
+    )}
+  </div>
+  )
   }
 
-}
 
-ReactDOM.render(<Tweet/>, document.getElementById("root"))
+
+
+let Tweets = [{
+  userHandle: 'TainoAldo174',
+  message: "Visiting Greece At The Moment",
+  replyNum: 4,
+  retweets: 8,
+  Likes: 10,
+  img_src: 'http://www.newsshare.in/wp-content/uploads/2017/04/Miniclip-8-Ball-Pool-Avatar-11.png'
+},{
+  userHandle: 'NerdyNerd',
+  message: "Enjoying the summer",
+  replyNum: 2,
+  retweets: 4,
+  Likes: 5,
+  img_src:'https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59094779-stock-illustration-profile-icon-male-avatar.jpg'
+},{
+  userHandle: 'UberDriver22',
+  message: "Driving Around",
+  replyNum: 9,
+  retweets: 15,
+  Likes: 20,
+  img_src:'https://st2.depositphotos.com/1006318/5909/v/950/depositphotos_59095529-stock-illustration-profile-icon-male-avatar.jpg'
+}]
+
+ReactDOM.render(<Tweet tweets={Tweets}/>, document.getElementById("root"))

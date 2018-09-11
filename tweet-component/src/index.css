@@ -13,6 +13,7 @@ body {
   display: flex;
   border-radius: 3px;
   background-color: whitesmoke;
+  margin-bottom: 5px;
 }
 
 .user-avatar-img {
