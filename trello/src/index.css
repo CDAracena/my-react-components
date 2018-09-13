@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: lightgrey;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.list-item {
+  background-color: whitesmoke;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 10px;
+  padding-left: 15px;
+}
+
+.list-item:hover {
+  background-color: white;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-title {
+  font-weight: bold;
+}
+
+.add-card {
+  padding: 5px;
+  color: grey;
+}
