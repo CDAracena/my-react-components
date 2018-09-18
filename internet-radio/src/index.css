@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  border: 1px solid #d3d3d3a6;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background: #d3d3d3a6;
+  box-shadow: 1px 1px 1px 1px lightgrey;
+}
+
+.genre-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+}
+
+.genre-btn {
+  padding: 15px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.header-title {
+  padding-left: 15px;
+}
